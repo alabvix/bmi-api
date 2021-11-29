@@ -30,4 +30,4 @@
 
 ### Usage:
 1. Use the **'/users'** endpoint to create a new user, the application will save it in the H2 memory database.
-2. Use the **'/bmi'** endpoint to calculates the BMI for an user.
+2. Use the **'/bmi'** endpoint to calculate the BMI for a user.
