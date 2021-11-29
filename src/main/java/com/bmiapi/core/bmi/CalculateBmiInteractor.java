@@ -50,7 +50,7 @@ public class CalculateBmiInteractor {
 
         saveBmiUseCase.save(bmi);
 
-        BmiOutput bmiOutput = new BmiOutput(user, rate, bmiValue);
+        BmiOutput bmiOutput = new BmiOutput(user, rate, bmiValue, bmi.date());
 
         logger.info("Bmi calculated for user id {} : {}", input.userId(), bmiValue);
 

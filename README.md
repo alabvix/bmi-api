@@ -25,9 +25,12 @@
 1. Clone the repo
 2. From command line run:
 >mvn clean install
-3. From command line Run: 
+3. From command line run: 
 >mvn spring-boot:run
 4. Or import in your IDE and run from it.
+
+if you have errors with new versions of IntelliJ or Java, try add VM options: 
+> --enable-preview 
 5. Open in your browse: http://localhost:8080/swagger-ui.html
 
 ### Usage:

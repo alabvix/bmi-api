@@ -9,6 +9,6 @@ public class CalculateBmiUseCase {
 
         BigDecimal height2 = height.multiply(height);
 
-        return weight.divide(height2, RoundingMode.HALF_UP).setScale(1);
+        return weight.divide(height2,2, RoundingMode.HALF_UP).setScale(2, RoundingMode.HALF_UP);
     }
 }

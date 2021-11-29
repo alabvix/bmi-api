@@ -4,8 +4,9 @@ import com.bmiapi.core.bmi.BmiRateEnum;
 import com.bmiapi.core.user.User;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 public record BmiOutput(User user, BmiRateEnum rate,
-                        BigDecimal value) {
+                        BigDecimal value, LocalDate date) {
 
 }
