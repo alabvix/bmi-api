@@ -33,7 +33,7 @@ public class CalculateBmiInputUseCaseUnitTest {
         );
 
         // when
-        BigDecimal bmi = calculateBmiUseCase.calculate(user.height(), user.weight(), user.age());
+        BigDecimal bmi = calculateBmiUseCase.calculate(user.height(), user.weight());
 
         // then
         assertEquals(BigDecimal.valueOf(22.00), bmi);

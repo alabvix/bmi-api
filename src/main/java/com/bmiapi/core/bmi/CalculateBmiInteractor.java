@@ -42,7 +42,7 @@ public class CalculateBmiInteractor {
 
         User user = findUserUseCase.findById(input.userId());
 
-        BigDecimal bmiValue = calculateBmiUseCase.calculate(user.height(), user.weight(), user.age());
+        BigDecimal bmiValue = calculateBmiUseCase.calculate(user.height(), user.weight());
 
         BmiRateEnum rate = rateBmiUseCase.rate(bmiValue);
 
