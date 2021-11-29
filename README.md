@@ -3,7 +3,7 @@
 
 #### Calculates the Body Mass Index for a previous saved user.
 
-### Layers:
+### Layers/packages:
 ![Layers](layers.png)
 
 - CORE: Contains the bussines logic, use cases, domains.
