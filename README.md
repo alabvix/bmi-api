@@ -7,7 +7,7 @@
 ![Layers](layers.png)
 
 - CORE: Contains the bussines logic, use cases, domains.
-- FRAMEWORK: Any java framework, in ths cases, Spring Boot.
+- FRAMEWORK: Any java framework, in this case Spring Boot.
 
 ### Requires:
 - Java 14+
