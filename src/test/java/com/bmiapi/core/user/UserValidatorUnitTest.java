@@ -31,7 +31,7 @@ public class UserValidatorUnitTest {
         String msg = userValidator.validate(user);
 
         // Then
-        assertEquals("Email cannot be null,Email cannot be empty", msg);
+        assertEquals("Email cannot be empty,Email cannot be null", msg);
 
     }
 
