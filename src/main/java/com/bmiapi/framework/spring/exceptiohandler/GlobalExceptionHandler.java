@@ -1,4 +1,4 @@
-package com.bmiapi.framework.spring.user.web;
+package com.bmiapi.framework.spring.exceptiohandler;
 
 import com.bmiapi.core.user.exception.InvalidUserException;
 import com.bmiapi.core.user.exception.UserNotFoundException;
@@ -12,7 +12,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 @ControllerAdvice
-public class UserExceptionHandler {
+public class GlobalExceptionHandler {
 
     @ExceptionHandler(InvalidUserException.class)
     public ResponseEntity<Object> handleInvalidUser(RuntimeException ex) {
