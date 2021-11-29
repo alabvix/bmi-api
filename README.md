@@ -22,9 +22,9 @@
 ### Compile & Run:
 1. Clone the repo
 2. From command line run:
->>mvn clean install
+>mvn clean install
 3. From command line Run: 
->>mvn spring-boot:run
+>mvn spring-boot:run
 4. Or import in your IDE and run from it.
 5. Open in your browse: http://localhost:8080/swagger-ui.html
 
