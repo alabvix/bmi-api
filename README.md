@@ -1,7 +1,7 @@
 # BMI - API
 ### Example application for a minimal clean architecture use case based design.
 
-### Calculates the Body Mass Index for a previous saved User.
+#### Calculates the Body Mass Index for a previous saved user.
 
 ### Layers:
 ![Layers](layers.png)
