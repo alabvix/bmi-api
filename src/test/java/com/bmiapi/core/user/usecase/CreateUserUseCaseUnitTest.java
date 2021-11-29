@@ -42,7 +42,8 @@ public class CreateUserUseCaseUnitTest {
                 new BigDecimal(1.80),
                 new BigDecimal(75.0),
                 31);
-        when(validator.validate(user)).thenReturn("");
+        //when(validator.validate(user))
+        doNothing().when(validator).validate(user);
 
         // when
         createUserUseCase.create(user);
@@ -63,7 +64,7 @@ public class CreateUserUseCaseUnitTest {
                 new BigDecimal(0.0),
                 new BigDecimal(0.0),
                 0);
-        when(validator.validate(user)).thenReturn("Invalid User");
+        doThrow(InvalidUserException.class).when(validator).validate(user);
 
         // when
         Assertions.assertThrows(InvalidUserException.class, () -> {

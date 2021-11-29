@@ -1,11 +1,12 @@
 package com.bmiapi.core.user;
 
+import com.bmiapi.core.user.exception.InvalidUserException;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import java.math.BigDecimal;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class UserValidatorUnitTest {
 
@@ -28,10 +29,13 @@ public class UserValidatorUnitTest {
                 20);
 
         // When
-        String msg = userValidator.validate(user);
+        InvalidUserException ex =
+                Assertions.assertThrows(InvalidUserException.class, () -> {
+            userValidator.validate(user);
+        });
 
         // Then
-        assertEquals("Email cannot be empty,Email cannot be null", msg);
+        assertEquals("Email cannot be empty,Email cannot be null", ex.getMessage());
 
     }
 
@@ -48,10 +52,13 @@ public class UserValidatorUnitTest {
                 20);
 
         // When
-        String msg = userValidator.validate(user);
+        InvalidUserException ex =
+                Assertions.assertThrows(InvalidUserException.class, () -> {
+                    userValidator.validate(user);
+                });
 
         // Then
-        assertEquals("Email cannot be empty", msg);
+        assertEquals("Email cannot be empty", ex.getMessage());
 
     }
 
@@ -68,15 +75,16 @@ public class UserValidatorUnitTest {
                 20);
 
         // When
-        String msg = userValidator.validate(user);
-
+        InvalidUserException ex =
+                Assertions.assertThrows(InvalidUserException.class, () -> {
+                    userValidator.validate(user);
+                });
         // Then
-        assertEquals("Email must be valid", msg);
+        assertEquals("Email must be valid", ex.getMessage());
 
     }
 
-    @Test
-    public void validate_valid_email_should_not_return_validation_message() {
+    public void validate_valid_email_should_not_throw_validation_exception() {
 
         // Given
         User user = new User(
@@ -87,11 +95,8 @@ public class UserValidatorUnitTest {
                 new BigDecimal(60.0),
                 20);
 
-        // When
-        String msg = userValidator.validate(user);
-
-        // Then
-        assertEquals("", msg);
+        // When, then
+        assertDoesNotThrow(() -> userValidator.validate(user));
 
     }
 }

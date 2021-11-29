@@ -1,5 +1,7 @@
 package com.bmiapi.core.user;
 
+import com.bmiapi.core.user.exception.InvalidUserException;
+
 import javax.validation.ConstraintViolation;
 import javax.validation.Validation;
 import javax.validation.Validator;
@@ -11,7 +13,7 @@ import java.util.stream.Collectors;
 
 public class UserValidator {
 
-    public String validate(User user) {
+    public void validate(User user) {
 
         List<String> validationMessages = new ArrayList<>();
         String concatMessages = "";
@@ -29,7 +31,9 @@ public class UserValidator {
                 .map(String::valueOf)
                 .collect(Collectors.joining(","));
 
-        return concatMessages;
+        if (!concatMessages.isEmpty()) {
+            throw new InvalidUserException(concatMessages);
+        }
 
     }
 }

@@ -22,11 +22,7 @@ public class CreateUserUseCase {
 
     public void create(User user) {
 
-        String violationMessages = userValidator.validate(user);
-        if (!violationMessages.isEmpty()) {
-            logger.error(violationMessages);
-            throw new InvalidUserException(violationMessages);
-        }
+        userValidator.validate(user);
 
         userRepository.save(user);
 
