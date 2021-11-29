@@ -1,6 +1,6 @@
 package com.bmiapi.framework.spring.config;
 
-import com.bmiapi.core.bmi.BmiInteractor;
+import com.bmiapi.core.bmi.CalculateBmiInteractor;
 import com.bmiapi.core.bmi.usecases.CalculateBmiUseCase;
 import com.bmiapi.core.bmi.usecases.RateBmiUseCase;
 import com.bmiapi.core.bmi.usecases.SaveBmiUseCase;
@@ -43,8 +43,8 @@ public class BmiApiConfig {
     SaveBmiUseCase saveBmiUseCase() { return new SaveBmiUseCase(bmiRepositoryImpl); }
 
     @Bean
-    BmiInteractor bmiInteractor() {
-        return new BmiInteractor(
+    CalculateBmiInteractor bmiInteractor() {
+        return new CalculateBmiInteractor(
                 calculateBmiUseCase(),
                 saveBmiUseCase(),
                 findUserUseCase(),

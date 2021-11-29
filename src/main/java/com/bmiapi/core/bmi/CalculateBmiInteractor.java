@@ -14,9 +14,9 @@ import org.slf4j.LoggerFactory;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-public class BmiInteractor {
+public class CalculateBmiInteractor {
 
-    final Logger logger = LoggerFactory.getLogger(BmiInteractor.class);
+    final Logger logger = LoggerFactory.getLogger(CalculateBmiInteractor.class);
 
     private final CalculateBmiUseCase calculateBmiUseCase;
 
@@ -26,10 +26,10 @@ public class BmiInteractor {
 
     private final RateBmiUseCase rateBmiUseCase;
 
-    public BmiInteractor(CalculateBmiUseCase calculateBmiUseCase,
-                         SaveBmiUseCase saveBmiUseCase,
-                         FindUserUseCase findUserUseCase,
-                         RateBmiUseCase rateBmiUseCase) {
+    public CalculateBmiInteractor(CalculateBmiUseCase calculateBmiUseCase,
+                                  SaveBmiUseCase saveBmiUseCase,
+                                  FindUserUseCase findUserUseCase,
+                                  RateBmiUseCase rateBmiUseCase) {
 
         this.calculateBmiUseCase = calculateBmiUseCase;
         this.saveBmiUseCase = saveBmiUseCase;
