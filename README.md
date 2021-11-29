@@ -18,6 +18,8 @@
 - H2 database
 - Beam Validations API
 - Spring Fox Swagger UI
+- JUnit 5
+- Spring Data JPA
 
 ### Compile & Run:
 1. Clone the repo
