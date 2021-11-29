@@ -20,12 +20,4 @@ public record User(UUID uuid,
                    @Max(value=120, message = "Age should not be greater than 120")
                    Integer age) {
 
-    public User(UUID uuid, String name, String email, BigDecimal height, BigDecimal weight, Integer age) {
-        this.uuid = uuid;
-        this.name = name;
-        this.email = email;
-        this.height = height;
-        this.weight = weight;
-        this.age = age;
-    }
 }
