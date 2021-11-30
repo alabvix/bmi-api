@@ -7,8 +7,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.UUID;
-
 @RestController
 @RequestMapping("/bmi")
 public class BmiController {
@@ -21,7 +19,7 @@ public class BmiController {
     }
 
     @PostMapping
-    public void calculateBmi(@RequestBody  BmiWebInput bmiWebInput) {
-        bmiService.calculateBmi(bmiWebInput);
+    public BmiWebOutput calculateBmi(@RequestBody  BmiWebInput bmiWebInput) {
+        return bmiService.calculateBmi(bmiWebInput);
     }
 }
