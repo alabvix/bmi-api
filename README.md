@@ -31,6 +31,7 @@
 
 if you have errors with new versions of IntelliJ or Java, try add VM options: 
 > --enable-preview 
+
 5. Open in your browse: http://localhost:8080/swagger-ui.html
 
 ### Usage:
