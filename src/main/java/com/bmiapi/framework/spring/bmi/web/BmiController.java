@@ -1,6 +1,5 @@
 package com.bmiapi.framework.spring.bmi.web;
 
-import com.bmiapi.core.bmi.domain.BmiOutput;
 import com.bmiapi.framework.spring.bmi.BmiService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
