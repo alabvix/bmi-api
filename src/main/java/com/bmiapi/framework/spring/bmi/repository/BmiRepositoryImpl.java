@@ -25,7 +25,8 @@ public class BmiRepositoryImpl implements BmiRepository {
 
     @Override
     public void save(Bmi bmi) {
-
+        BmiEntity bmiEntity = bmiConverter.toEntity(bmi);
+        bmiJpaRepository.save(bmiEntity);
     }
 
     @Override

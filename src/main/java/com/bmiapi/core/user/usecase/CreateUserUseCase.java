@@ -21,13 +21,15 @@ public class CreateUserUseCase {
         this.userValidator = validator;
     }
 
-    public void create(User user) {
+    public UUID create(User user) {
 
         userValidator.validate(user);
 
         UUID id = userRepository.save(user);
 
         logger.info("User created with UUID {}", id);
+
+        return id;
 
     }
 
